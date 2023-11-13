@@ -7094,22 +7094,22 @@ fi
 # Set language strings for dialogs and notifications.
 set_display_strings_language() {
 #### Langauge for the restart button in dialogs. Note that for deadline dialogs this is the default button.
-display_string_restart_button="Restart"
+display_string_restart_button="Reiniciar"
 
 #### Language for the deferral button in dialogs.
-display_string_deferral_button="Defer"
+display_string_deferral_button="Posponer"
 
 #### Language for the ok button in certain dialogs and notifications.
-display_string_ok_button="OK"
+display_string_ok_button="Aceptar"
 
 ### Language for various deferral time durations.
-display_string_minutes="Minutes"
-display_string_hour="Hour"
-display_string_hours="Hours"
-display_string_day="Day"
-display_string_days="Days"
-display_string_week="Week"
-display_string_and="and"
+display_string_minutes="Minutos"
+display_string_hour="Hora"
+display_string_hours="Horas"
+display_string_day="Día"
+display_string_days="Días"
+display_string_week="Semana"
+display_string_and="y"
 
 #### This code generates the ${display_string_workflow_title} variable to include the appropriate macOS update or upgrade.
 if [[ "${macos_major_upgrade_version_major_target}" != "FALSE" ]]; then # A macOS upgrade is available and option to allow upgrade is enabled.
@@ -7143,99 +7143,99 @@ fi
 # For body text note that IBM Notifier interprets "\n" as a return.
 
 #### Language for notification_install_now_start(), a non-interactive notification informing the user that the install now workflow has started.
-display_string_install_now_start_title="Apple Software Update Workflow Starting"
-display_string_install_now_start_body="The Apple software update workflow has started, and you will be notified if this computer needs to restart.\n\nDuring this time you can continue to use the computer or lock the screen, but please do not restart or sleep the computer as it will prolong the Apple software update process."
+display_string_install_now_start_title="Comenzando actualización de seguridad"
+display_string_install_now_start_body="Una actualización requerida se está procesando, se notificará en caso de ser necesario reiniciar.\n\nDurante este tiempo puedes seguir usando el equipo pero, por favor, no reinicies ni pongas el equipo en reposo hasta que finalice la actualización."
 
 #### Language for notification_install_now_download(), a non-interactive notification informing the user that the install now workflow is downloading the macOS update/upgrade.
-display_string_install_now_download_title="Downloading ${display_string_workflow_title}"
-display_string_install_now_download_body="The ${display_string_workflow_title} is downloading from Apple. This may take a while, but you will be notified before this computer automatically restarts.\n\nDuring this time you can continue to use the computer or lock the screen, but please do not restart or sleep the computer as it will prolong the update/upgrade process."
+display_string_install_now_download_title="Descargando ${display_string_workflow_title}"
+display_string_install_now_download_body="${display_string_workflow_title} se está descargando. Esto puede llevar unos minutos, serás notificado antes de reiniciar.\n\nDurante este tiempo puedes seguir usando el equipo pero, por favor, no reinicies ni pongas el equipo en reposo hasta que finalice la actualización."
 
 #### Language for notification_install_now_up_to_date(), a non-interactive notification informing the user that the install now workflow doesn't have anything else to do.
-display_string_install_now_up_to_date_title="Apple software update Complete"
-display_string_install_now_up_to_date_body="Apple system software is already up to date or is the latest version allowed by management."
+display_string_install_now_up_to_date_title="Actualización de seguridad completada"
+display_string_install_now_up_to_date_body="El sistema operativo está totalmente actualizado a la última versión permitida por su administrador"
 
 #### Language for notification_install_now_failed(), a non-interactive notification informing the user that the install now workflow has failed.
 # This is used for all update/upgrade workflows if they fail to start or timeout after a pending restart notification has been shown.
-display_string_install_now_failed_title="${display_string_workflow_title} Failed"
-display_string_install_now_failed_body="The ${display_string_workflow_title} failed to complete, the computer will not be restarting.\n\nYou can try again or consider contacting your technical support team if you're experiencing consistent failures."
+display_string_install_now_failed_title="${display_string_workflow_title} Error"
+display_string_install_now_failed_body="${display_string_workflow_title} no se ha completado, el ordenador no se reiniciará.\n\nVuelve a intentarlo posteriormente y avisa a Soporte IT si vuelve a suceder"
 
 #### Language for notification_prepare(), a non-interactive notification informing the user that a update/upgrade preparation process has started.
 # This is used for both non-deadline and deadline workflows.
-display_string_prepare_title="${display_string_workflow_title} Requires Restart"
-display_string_prepare_default_body="A required software update will automatically restart this computer in about ${display_string_prepare_time_estimate} minutes.\n\nDuring this time you can continue to use the computer or lock the screen, but please do not restart or sleep the computer as it will prolong the update process."
-display_string_prepare_deadline_count_body="You have deferred the maximum number of ${display_string_deadline_count_maximum} times.\n\nA required software update will automatically restart this computer in about ${display_string_prepare_time_estimate} minutes.\n\nDuring this time you can continue to use the computer or lock the screen, but please do not restart or sleep the computer as it will prolong the update process."
-display_string_prepare_deadline_days_body="You have deferred the maximum number of ${deadline_days_hard} days.\n\nA required software update will automatically restart this computer in about ${display_string_prepare_time_estimate} minutes.\n\nDuring this time you can continue to use the computer or lock the screen, but please do not restart or sleep the computer as it will prolong the update process."
-display_string_prepare_deadline_date_body="The deferment deadline of ${display_string_deadline_date} has passed.\n\nA required software update will automatically restart this computer in about ${display_string_prepare_time_estimate} minutes.\n\nDuring this time you can continue to use the computer or lock the screen, but please do not restart or sleep the computer as it will prolong the update process."
+display_string_prepare_title="${display_string_workflow_title} requiere reiniciar"
+display_string_prepare_default_body="Una actualización de seguridad reiniciará automáticamente el equipo en aproximadamente ${display_string_prepare_time_estimate} minutos.\n\nDurante este tiempo puedes seguir usando el equipo pero, por favor, no reinicies ni pongas el equipo en reposo hasta que finalice la actualización."
+display_string_prepare_deadline_count_body="Se ha pospuesto el número máximo permitido de ${display_string_deadline_count_maximum} veces.\n\nUna actualización de seguridad reiniciará automáticamente el equipo en aproximadamente ${display_string_prepare_time_estimate} minutos.\n\nDurante este tiempo puedes seguir usando el equipo pero, por favor, no reinicies ni pongas el equipo en reposo hasta que finalice la actualización."
+display_string_prepare_deadline_days_body="Se ha pospuesto el número máximo permitido de ${deadline_days_hard} días.\n\nUna actualización de seguridad reiniciará automáticamente el equipo en aproximadamente ${display_string_prepare_time_estimate} minutos.\n\nDurante este tiempo puedes seguir usando el equipo pero, por favor, no reinicies ni pongas el equipo en reposo hasta que finalice la actualización."
+display_string_prepare_deadline_date_body="La fecha límite permitida de ${display_string_deadline_date} se ha sobrepasado.\n\nUna actualización de seguridad reiniciará automáticamente el equipo en aproximadamente ${display_string_prepare_time_estimate} minutos.\n\nDurante este tiempo puedes seguir usando el equipo pero, por favor, no reinicies ni pongas el equipo en reposo hasta que finalice la actualización."
 
 #### Language for notification_restart(), a non-interactive notification informing the user that the computer is going to restart very soon.
 # This is used for all softwareupdate workflows and near the end of the MDM workflow.
 # This is used for both non-deadline and deadline workflows.
-display_string_restart_title="${display_string_workflow_title} Requires Restart"
-display_string_restart_default_body="This computer will automatically restart very soon.\n\nSave any open documents now."
-display_string_restart_deadline_count_body="You have deferred the maximum number of ${display_string_deadline_count_maximum} times.\n\nThis computer will automatically restart very soon.\n\nSave any open documents now."
-display_string_restart_deadline_days_body="You have deferred the maximum number of ${deadline_days_hard} days.\n\nThis computer will automatically restart very soon.\n\nSave any open documents now."
-display_string_restart_deadline_date_body="The deferment deadline of ${display_string_deadline_date} has passed.\n\nThis computer will automatically restart very soon.\n\nSave any open documents now."
+display_string_restart_title="${display_string_workflow_title} requiere reiniciar"
+display_string_restart_default_body="El equipo se reiniciará automáticamente muy pronto.\n\nGuarde los documentos abiertos."
+display_string_restart_deadline_count_body="Se ha pospuesto el número máximo permitido de ${display_string_deadline_count_maximum} veces.\n\nEl equipo se reiniciará automáticamente muy pronto.\n\nGuarde los documentos abiertos."
+display_string_restart_deadline_days_body="Se ha pospuesto el número máximo permitido de ${deadline_days_hard} días.\n\nEl equipo se reiniciará automáticamente muy pronto.\n\nGuarde los documentos abiertos."
+display_string_restart_deadline_date_body="La fecha límite permitida de ${display_string_deadline_date} se ha sobrepasado.\n\nEl equipo se reiniciará automáticamente muy pronto.\n\nGuarde los documentos abiertos."
 
 #### Language for notification_non_system_updates(), a non-interactive notification informing the user that the install now workflow is installing non-system Apple software updates.
-display_string_non_system_updates_title="Installing ${display_string_workflow_title}"
-display_string_non_system_updates_body="Required Apple software updates are now installing.\n\nThe computer will not restart but some Apple applications (like Safari) may automatically restart.\n\nThis should only take a few minutes, but please do not restart or sleep the computer as it will prolong the update process."
+display_string_non_system_updates_title="Instalando ${display_string_workflow_title}"
+display_string_non_system_updates_body="Una actualización de seguridad se está instalando\n\nEl equipo no necesita reiniciarse pero algunas aplicaciones (como Safari) es posible que se reinicien.\n\nEsto solo llevará unos minutos, por favor no reinicies o apagues el equipo mientras tanto."
 
 #### Language for notification_failed(), a non-interactive notification informing the user that the managed update/upgrade process has failed.
 # This is used for all update/upgrade workflows if they fail to start or timeout after a pending restart notification has been shown.
-display_string_failed_title="${display_string_workflow_title} Failed"
-display_string_failed_body="The ${display_string_workflow_title} failed to complete.\n\nThe computer will not restart right now, but you will be notified later when the software update is attempted again."
+display_string_failed_title="${display_string_workflow_title} Error"
+display_string_failed_body="${display_string_workflow_title} no ha podido completarse.\n\nEl equipo se reiniciará ahora, pero puede que vuelva a solicitar la actualización posteriormente."
 
 #### Language for dialog_insufficient_storage(), a dialog informing the user that there is insufficient storage for macOS update/upgrade.
 # This is used for both non-deadline and deadline workflows.
-display_string_insufficient_storage_title="Insufficient Storage For ${display_string_workflow_title}"
-display_string_insufficient_storage_timeout="Please remove unecessary items in"
-display_string_insufficient_storage_default_body="A required macOS update needs ${storage_required_gigabytes} GBs of storage space and only ${storage_available_gigabytes} GBs is available.\n\nPlease use the storage settings (shown behind this notification) to remove unnecessary items."
-display_string_insufficient_storage_deadline_count_body="You have deferred the maximum number of ${display_string_deadline_count_maximum} times.\n\nA required macOS update needs ${storage_required_gigabytes} GBs of storage space and only ${storage_available_gigabytes} GBs is available.\n\nPlease use the storage settings (shown behind this notification) to remove unnecessary items."
-display_string_insufficient_storage_deadline_days_body="You have deferred the maximum number of ${deadline_days_hard} days.\n\nA required macOS update needs ${storage_required_gigabytes} GBs of storage space and only ${storage_available_gigabytes} GBs is available.\n\nPlease use the storage settings (shown behind this notification) to remove unnecessary items."
-display_string_insufficient_storage_deadline_date_body="The deferment deadline of ${display_string_deadline_date} has passed.\n\nA required macOS update needs ${storage_required_gigabytes} GBs of storage space and only ${storage_available_gigabytes} GBs is available.\n\nPlease use the storage settings (shown behind this notification) to remove unnecessary items."
+display_string_insufficient_storage_title="Espacio de almacenamiento insuficiente para ${display_string_workflow_title}"
+display_string_insufficient_storage_timeout="Por favor, libera espacio elminando lo innecesario en"
+display_string_insufficient_storage_default_body="La actualización de seguridad necesita ${storage_required_gigabytes} GBs de espacio libre y solo dispones de ${storage_available_gigabytes} GBs.\n\nPor favor, utiliza las opciones de almacenamiento para liberar espacio."
+display_string_insufficient_storage_deadline_count_body="Se ha pospuesto el número máximo permitido de ${display_string_deadline_count_maximum} veces.\n\nLa actualización de seguridad necesita ${storage_required_gigabytes} GBs de espacio libre y solo dispones de ${storage_available_gigabytes} GBs.\n\nPor favor, utiliza las opciones de almacenamiento para liberar espacio."
+display_string_insufficient_storage_deadline_days_body="Se ha pospuesto el número máximo permitido de ${deadline_days_hard} días.\n\nLa actualización de seguridad necesita ${storage_required_gigabytes} GBs de espacio libre y solo dispones de ${storage_available_gigabytes} GBs.\n\nPor favor, utiliza las opciones de almacenamiento para liberar espacio."
+display_string_insufficient_storage_deadline_date_body="La fecha límite permitida de ${display_string_deadline_date} se ha sobrepasado.\n\nLa actualización de seguridad necesita ${storage_required_gigabytes} GBs de espacio libre y solo dispones de ${storage_available_gigabytes} GBs.\n\nPor favor, utiliza las opciones de almacenamiento para liberar espacio."
 
 #### Language for dialog_power_required(), a dialog notification informing the user that they need to plug the computer into AC power.
 # This is used for both non-deadline and deadline workflows.
-display_string_power_required_title="${display_string_workflow_title} Requires Power Source"
-display_string_power_required_timeout="Please connect power supply in"
-display_string_power_required_default_body="You must connect this computer to a power supply in order to install the required macOS update."
-display_string_power_required_deadline_count_body="You have deferred the maximum number of ${display_string_deadline_count_maximum} times.\n\nYou must connect this computer to a power supply in order to install the required macOS update."
-display_string_power_required_deadline_days_body="You have deferred the maximum number of ${deadline_days_hard} days.\n\nYou must connect this computer to a power supply in order to install the required macOS update."
-display_string_power_required_deadline_date_body="The deferment deadline of ${display_string_deadline_date} has passed.\n\nYou must connect this computer to a power supply in order to install the required macOS update."
+display_string_power_required_title="${display_string_workflow_title} requiere que el equipo esté conectado a la corriente"
+display_string_power_required_timeout="Por favor, conecta la fuente de alimentación en"
+display_string_power_required_default_body="Debes conectar el equipo a la corriente para que se pueda instalar la actualización de seguridad."
+display_string_power_required_deadline_count_body="Se ha pospuesto el número máximo permitido de ${display_string_deadline_count_maximum} veces.\n\nDebes conectar el equipo a la corriente para que se pueda instalar la actualización de seguridad."
+display_string_power_required_deadline_days_body="Se ha pospuesto el número máximo permitido de ${deadline_days_hard} días.\n\nDebes conectar el equipo a la corriente para que se pueda instalar la actualización de seguridad."
+display_string_power_required_deadline_date_body="La fecha límite permitida de ${display_string_deadline_date} se ha sobrepasado.\n\nDebes conectar el equipo a la corriente para que se pueda instalar la actualización de seguridad."
 
 #### Language for dialog_restart_or_defer(), an interactive dialog giving the user a choice to defer the update or restart.
-display_string_restart_or_defer_title="${display_string_workflow_title} Requires Restart"
-display_string_restart_or_defer_timeout="Please make selection in"
-display_string_restart_or_defer_menu_title="Defer software update for:"
-display_string_restart_or_defer_default_body="• No deadline date and unlimited deferrals.\n"
-display_string_restart_or_defer_date_body="• Deferral available until ${display_string_deadline}.\n"
-display_string_restart_or_defer_count_body="• ${display_string_deadline_count} out of ${display_string_deadline_count_maximum} deferrals remaining.\n"
-display_string_restart_or_defer_date_count_body="• Deferral available until ${display_string_deadline}.\n\n• ${display_string_deadline_count} out of ${display_string_deadline_count_maximum} deferrals remaining.\n"
+display_string_restart_or_defer_title="${display_string_workflow_title} requiere reiniciar"
+display_string_restart_or_defer_timeout="Por favor, selecciona"
+display_string_restart_or_defer_menu_title="Aplazar la actualización hasta dentro de:"
+display_string_restart_or_defer_default_body="No hay fecha límite y se puede posponer indefinidamente.\n"
+display_string_restart_or_defer_date_body="Se puede posponer hasta ${display_string_deadline}.\n"
+display_string_restart_or_defer_count_body="Se puede posponer hasta ${display_string_deadline_count} veces, quedan ${display_string_deadline_count_maximum}.\n"
+display_string_restart_or_defer_date_count_body="Se puede posponer hasta ${display_string_deadline}.\n\n• ${display_string_deadline_count} veces, quedan ${display_string_deadline_count_maximum}.\n"
 
 #### Language for dialog_soft_deadline(), an interactive dialog when a soft deadline has passed, giving the user only one button to continue the workflow.
-display_string_soft_deadline_title="${display_string_workflow_title} Requires Restart"
-display_string_soft_deadline_timeout="Automatic restart in"
-display_string_soft_deadline_count_body="You have deferred the maximum number of ${display_string_deadline_count_maximum} times."
-display_string_soft_deadline_days_body="You have deferred the maximum number of ${deadline_days_soft} days."
-display_string_soft_deadline_date_body="The deferment deadline has passed:\n${display_string_deadline_date}."
+display_string_soft_deadline_title="${display_string_workflow_title} requiere reiniciar"
+display_string_soft_deadline_timeout="Se reiniciara en"
+display_string_soft_deadline_count_body="Se ha pospuesto el número máximo permitido de ${display_string_deadline_count_maximum} veces."
+display_string_soft_deadline_days_body="Se ha pospuesto el número máximo permitido de ${deadline_days_soft} días."
+display_string_soft_deadline_date_body="La fecha límite permitida se ha sobrepasado:\n${display_string_deadline_date}."
 
 #### Language for dialog_user_auth(), an interactive dialog to collect user credentials for macOS update/upgrade workflow
-display_string_user_auth_title="${display_string_workflow_title} Requires Authentication"
-display_string_user_auth_timeout="Please enter password in"
-display_string_user_auth_default_body="You must enter the password for user \"${current_user_real_name}\" to install the ${display_string_workflow_title}.\n"
-display_string_user_auth_deadline_count_body="You have deferred the maximum number of ${display_string_deadline_count_maximum} times.\n\nYou must enter the password for user \"${current_user_real_name}\" to install the ${display_string_workflow_title}.\n"
-display_string_user_auth_deadline_days_soft_body="You have deferred the maximum number of ${deadline_days_soft} days.\n\nYou must enter the password for user \"${current_user_real_name}\" to install the ${display_string_workflow_title}.\n"
-display_string_user_auth_deadline_days_hard_body="You have deferred the maximum number of ${deadline_days_hard} days.\n\nYou must enter the password for user \"${current_user_real_name}\" to install the ${display_string_workflow_title}.\n"
-display_string_user_auth_deadline_date_body="The deferment deadline of ${display_string_deadline_date} has passed.\n\nYou must enter the password for user \"${current_user_real_name}\" to install the ${display_string_workflow_title}.\n"
-display_string_user_auth_password_title="Enter Password Here:"
-display_string_user_auth_password_placeholder="Password Required"
-display_string_user_auth_retry_default_body="You must enter the password for user \"${current_user_real_name}\" to install the ${display_string_workflow_title}.\n"
-display_string_user_auth_retry_deadline_count_body="You have deferred the maximum number of ${display_string_deadline_count_maximum} times.\n\nYou must enter the password for user \"${current_user_real_name}\" to install the ${display_string_workflow_title}.\n"
-display_string_user_auth_retry_deadline_days_soft_body="You have deferred the maximum number of ${deadline_days_soft} days.\n\nYou must enter the password for user \"${current_user_real_name}\" to install the ${display_string_workflow_title}.\n"
-display_string_user_auth_retry_deadline_days_hard_body="You have deferred the maximum number of ${deadline_days_hard} days.\n\nYou must enter the password for user \"${current_user_real_name}\" to install the ${display_string_workflow_title}.\n"
-display_string_user_auth_retry_deadline_date_body="The deferment deadline of ${display_string_deadline_date} has passed.\n\nYou must enter the password for user \"${current_user_real_name}\" to install the ${display_string_workflow_title}.\n"
-display_string_user_auth_retry_password_title="Authentication Failed - Try Password Again:"
-display_string_user_auth_retry_password_placeholder="Password Required"
+display_string_user_auth_title="${display_string_workflow_title} requiere autenticación"
+display_string_user_auth_timeout="Por favor, introduce la contraseña en"
+display_string_user_auth_default_body="Introduce la contraseña del usuario \"${current_user_real_name}\" para instalar ${display_string_workflow_title}.\n"
+display_string_user_auth_deadline_count_body="Se ha pospuesto el número máximo permitido de ${display_string_deadline_count_maximum} veces.\n\nIntroduce la contraseña del usuario \"${current_user_real_name}\" para instalar ${display_string_workflow_title}.\n"
+display_string_user_auth_deadline_days_soft_body="Se ha pospuesto el número máximo permitido de ${deadline_days_soft} días.\n\nIntroduce la contraseña del usuario \"${current_user_real_name}\" para instalar ${display_string_workflow_title}.\n"
+display_string_user_auth_deadline_days_hard_body="Se ha pospuesto el número máximo permitido de ${deadline_days_hard} días.\n\nIntroduce la contraseña del usuario \"${current_user_real_name}\" para instalar ${display_string_workflow_title}.\n"
+display_string_user_auth_deadline_date_body="La fecha límite permitida de ${display_string_deadline_date} se ha sobrepasado.\n\nIntroduce la contraseña del usuario \"${current_user_real_name}\" para instalar ${display_string_workflow_title}.\n"
+display_string_user_auth_password_title="Introduce la contraseña aquí:"
+display_string_user_auth_password_placeholder="Contraseña requerida"
+display_string_user_auth_retry_default_body="Introduce la contraseña del usuario \"${current_user_real_name}\" para instalar ${display_string_workflow_title}.\n"
+display_string_user_auth_retry_deadline_count_body="Se ha pospuesto el número máximo permitido de ${display_string_deadline_count_maximum} veces.\n\nIntroduce la contraseña del usuario \"${current_user_real_name}\" para instalar ${display_string_workflow_title}.\n"
+display_string_user_auth_retry_deadline_days_soft_body="Se ha pospuesto el número máximo permitido de ${deadline_days_soft} días.\n\nIntroduce la contraseña del usuario \"${current_user_real_name}\" para instalar ${display_string_workflow_title}.\n"
+display_string_user_auth_retry_deadline_days_hard_body="Se ha pospuesto el número máximo permitido de ${deadline_days_hard} días.\n\nIntroduce la contraseña del usuario \"${current_user_real_name}\" para instalar ${display_string_workflow_title}.\n"
+display_string_user_auth_retry_deadline_date_body="La fecha límite permitida de ${display_string_deadline_date} se ha sobrepasado.\n\nIntroduce la contraseña del usuario \"${current_user_real_name}\" para instalar ${display_string_workflow_title}.\n"
+display_string_user_auth_retry_password_title="Fallo de autenticación. Inténtalo otra vez:"
+display_string_user_auth_retry_password_placeholder="Contraseña requerida"
 }
 
 # Set the ${display_string_deferral_button} based on the ${deferral_timer_minutes}.
