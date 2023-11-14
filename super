@@ -4066,13 +4066,6 @@ fi
 check_user_focus() {
 user_focus_active="FALSE"
 if [[ -n "${deadline_count_focus}" ]] || [[ -n "${deadline_days_focus}" ]] || [[ -n "${deadline_date_focus}" ]]; then
-	local focus_response
-	focus_response=$(plutil -extract data.0.storeAssertionRecords.0.assertionDetails.assertionDetailsModeIdentifier raw -o - "/Users/${current_user_account_name}/Library/DoNotDisturb/DB/Assertions.json" | grep -ic 'com.apple.')
-	[[ "${verbose_mode_option}" == "TRUE" ]] && log_super "Verbose Mode: Function ${FUNCNAME[0]}: focus_response is: ${focus_response}"
-	if [[ "${focus_response}" -gt 0 ]]; then
-		log_super "Status: Focus or Do Not Disturb enabled for current user: ${current_user_account_name}."
-		user_focus_active="TRUE"
-	fi
 	local previous_ifs
 	previous_ifs="${IFS}"; IFS=$'\n'
 	local display_assertions_array
